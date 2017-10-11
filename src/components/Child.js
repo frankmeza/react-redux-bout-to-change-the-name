@@ -17,7 +17,14 @@ class Child extends Component {
     }
 
     handleSubmit() {
-        this.props.setName(this.state.name)
+        this.props.store.dispatch(this.setName(this.state.name))
+    }
+
+    setName(name) {
+        return {
+            type: "SET_NAME",
+            name
+        }
     }
 
     render() {

@@ -11,7 +11,7 @@ class Parent extends Component {
             <div>
                 <h2>Child's name is {name}</h2>
                 {/* 9. pass the above name and pass along this.props.store into child, from redux in index.js */}
-                <Child name={name} store={this.props.store} />
+                <Child name={name} dispatch={this.props.store.dispatch} />
             </div>
         )
     }

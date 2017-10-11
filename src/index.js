@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import App from './App'
-import registerServiceWorker from './registerServiceWorker'
+
+import * as actions from './actions'
 import Parent from './components/Parent'
-import Child from './components/Child'
 
 // 1. import redux, and reducer
 import { createStore } from 'redux'
@@ -16,7 +15,7 @@ const store = createStore(changeNameApp)
 // 3. render Parent component to DOM, passing in store as a prop to Parent
 const render = () => {
     ReactDOM.render(
-        <Parent store={store}/>, 
+        <Parent store={store} actions={actions} />, 
         document.getElementById('root')
     )
 }

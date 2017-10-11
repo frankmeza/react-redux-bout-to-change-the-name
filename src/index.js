@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import Parent from './components/Parent'
+import Child from './components/Child'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Parent />, document.getElementById('root'));
 registerServiceWorker();

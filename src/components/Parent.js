@@ -7,6 +7,8 @@ export class Parent extends Component {
         this.state = {
             name: "Frank"
         }
+
+        this.setName = this.setName.bind(this)
     }
 
     setName(name) {

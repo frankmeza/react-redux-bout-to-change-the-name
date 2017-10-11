@@ -1,15 +1,16 @@
 import React, { Component } from "react"
 import Child from "./Child"
 
+// 7. Parent takes the store as a prop
 class Parent extends Component {
     render() {
-        // get name from store in the props
+        // 8. get current (or default) name from store in this.props
         const name = this.props.store.getState().name
         
         return (
             <div>
                 <h2>Child's name is {name}</h2>
-                {/* pass the above name into child, and pass along this.props.store, from redux in index.js */}
+                {/* 9. pass the above name and pass along this.props.store into child, from redux in index.js */}
                 <Child name={name} store={this.props.store} />
             </div>
         )
@@ -17,3 +18,5 @@ class Parent extends Component {
 }
 
 export default Parent
+
+// 10. now go to Child component

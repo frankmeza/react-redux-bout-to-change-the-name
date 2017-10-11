@@ -6,14 +6,14 @@ import registerServiceWorker from './registerServiceWorker'
 import Parent from './components/Parent'
 import Child from './components/Child'
 
-// import redux, and reducer
+// 1. import redux, and reducer
 import { createStore } from 'redux'
 import changeNameApp from "./reducers/name_reducer"
 
-// instantiate a store using the reducer
+// 2. instantiate a store using the reducer
 const store = createStore(changeNameApp)
 
-// render Parent component to DOM, passing in store as a prop to Parent
+// 3. render Parent component to DOM, passing in store as a prop to Parent
 const render = () => {
     ReactDOM.render(
         <Parent store={store}/>, 
@@ -21,9 +21,11 @@ const render = () => {
     )
 }
 
-// call function so that initial state is rendered
+// 4. call function so that initial state is rendered
 render()
 
-// subscribe #render to listen to the store,
+// 5. subscribe #render to listen to the store,
 // so it runs every time the store is updated
 store.subscribe(render)
+
+// 6. Now go to Parent component
